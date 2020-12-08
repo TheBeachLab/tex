@@ -1,0 +1,24 @@
+\documentclass{minimal}
+\usepackage{tikz}
+\begin{document}
+hello how are you my name is Fran
+
+\begin{tikzpicture}
+	\draw [grey,very thin,step=1] (-2,0) grid (6,4);
+	\draw [red,thick] (0,0) -- (4,0) -- (6,4) -- (-2,1) -- cycle;
+	\draw (0,0) rectangle (2,1);
+	\draw (2,1) circle (1);
+	\draw [dashed] (2,1) ellipse (1 and 0.2);
+	\draw [blue] (0,0) arc (0:180:0.2);
+	\filldraw [fill =black!20!white, draw=black. thick] (0,2) rectangle (1,3);
+	\shade [left color=red, right color=yellow] (2,2) rectangle (3,3);
+	\shadedraw [inner color=blue, outer color=cyan, draw=orange, thick] (5,1) circle (0.5);
+	\draw [thick, ->] (0,0) -- (0,3.5) node[anchor=south east] {time};
+	\draw [thick, ->] (0,0) -- (4.5,0) node[anchor=north west] {space};
+	\foreach \x in {1,2,3,4}
+		\draw (\x,2pt) -- (\x,-2pt) node[anchor=north] {$\x$};
+	\foreach \x in {1,2,3}
+		\draw (-2pt,\x) -- (2pt,\x) node[anchor=east] {$\x$s};
+
+\end{tikzpicture}
+\end{document}
